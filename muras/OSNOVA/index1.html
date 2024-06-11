@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Поступление в Колледж Мирас</title>
+<style>
+  /* Стили для страницы */
+  body { font-family: 'Arial', sans-serif; background-color: #f0f0f0; }
+  .container { max-width: 600px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+  form { display: flex; flex-direction: column; }
+  label { margin-top: 10px; }
+  input, textarea { padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; }
+  button { padding: 10px; margin-top: 20px; background: #004a99; color: white; border: none; border-radius: 4px; cursor: pointer; }
+  button:hover { background: #003366; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Форма поступления</h2>
+  <form id="admissionForm">
+    <label for="fullName">ФИО:</label>
+    <input type="text" id="fullName" name="fullName" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Телефон:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="program">Выбранная программа:</label>
+    <select id="program" name="program">
+      <option value="softwareEngineering">Программное обеспечение</option>
+      <option value="networkEngineering">Сетевое инженерство</option>
+      <!-- Добавьте другие программы здесь -->
+    </select>
+
+    <label for="comments">Комментарии:</label>
+    <textarea id="comments" name="comments"></textarea>
+
+    <button type="submit">Отправить заявку</button>
+  </form>
+</div>
+
+<script>
+  document.getElementById('admissionForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Ваша заявка успешно отправлена!');
+    // Здесь может быть код для обработки формы
+  });
+</script>
+
+</body>
+</html>
